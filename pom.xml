@@ -49,10 +49,10 @@
         <!-- Library versions -->
         <!-- ~~~~~~~~~~~~~~~~ -->
 
-        <java-version>1.6</java-version>
+        <java-version>1.7</java-version>
 
         <!-- http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.apache.maven%22%20AND%20a%3A%22maven-core%22 -->
-        <maven-version>3.0.4</maven-version>
+        <maven-version>3.1.1</maven-version>
 
         <!-- http://evgenyg.artifactoryonline.com/evgenyg/plugins-releases/com/github/goldin/about-maven-plugin/ -->
         <previous-plugins-version>0.3-beta-1</previous-plugins-version>
@@ -78,15 +78,18 @@
         <!-- http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.apache.ant%22%20AND%20a%3A%22ant%22 -->
         <ant-version>1.9.1</ant-version>
 
-        <!-- http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.sonatype.aether%22%20AND%20a%3A%22aether-api%22 -->
-        <aether-version>1.13.1</aether-version>
+        <!-- http://search.maven.org/#search|ga|1|g%3A%22org.eclipse.aether%22%20AND%20a%3A%22aether-api%22 -->
+        <aether-version>0.9.0.M4</aether-version>
+
+        <!-- http://search.maven.org/#search|ga|1|g%3A%22org.eclipse.aether%22%20a%3A%22aether-connector-wagon%22 -->
+        <aether-wagon-version>0.9.0.M2</aether-wagon-version>
 
         <!-- http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.gcontracts%22%20AND%20a%3A%22gcontracts-core%22 -->
         <gcontracts-version>1.2.12</gcontracts-version>
 
         <!-- http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.sonatype.sisu%22%20AND%20a%3A%22sisu-inject-bean%22   -->
         <!-- http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.sonatype.sisu%22%20AND%20a%3A%22sisu-inject-plexus%22 -->
-        <sisu-inject-version>2.4.0</sisu-inject-version>
+        <!--<sisu-inject-version>2.4.0</sisu-inject-version>-->
     </properties>
 
 	<pluginRepositories>
@@ -280,25 +283,26 @@
 
         <plugins>
 
-            <plugin>
-                <groupId>com.github.goldin</groupId>
-                <artifactId>silencer-maven-plugin</artifactId>
-                <version>${previous-plugins-version}</version>
-                <executions>
-                    <execution>
-                        <id>enable-silencer</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>silence</goal>
-                        </goals>
-                        <configuration>
-                            <runIf>{{ System.getProperty( 'silence' ) != null }}</runIf>
-                            <logSummary>true</logSummary>
-                            <topN>5</topN>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+            <!-- Can't use the MVN 3.0 version of this to create the MVN 3.1 version -->
+            <!--<plugin>-->
+                <!--<groupId>com.github.goldin</groupId>-->
+                <!--<artifactId>silencer-maven-plugin</artifactId>-->
+                <!--<version>${previous-plugins-version}</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>enable-silencer</id>-->
+                        <!--<phase>validate</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>silence</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<runIf>{{ System.getProperty( 'silence' ) != null }}</runIf>-->
+                            <!--<logSummary>true</logSummary>-->
+                            <!--<topN>5</topN>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
 
             <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
             <!-- Enforcing Maven/Java versions                                                 -->

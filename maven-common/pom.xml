@@ -105,27 +105,27 @@
         </dependency>
 
         <dependency>
-            <groupId>org.sonatype.aether</groupId>
+            <groupId>org.eclipse.aether</groupId>
             <artifactId>aether-api</artifactId>
             <version>${aether-version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.sonatype.aether</groupId>
+            <groupId>org.eclipse.aether</groupId>
             <artifactId>aether-util</artifactId>
             <version>${aether-version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.sonatype.aether</groupId>
+            <groupId>org.eclipse.aether</groupId>
             <artifactId>aether-impl</artifactId>
             <version>${aether-version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.sonatype.aether</groupId>
+            <groupId>org.eclipse.aether</groupId>
             <artifactId>aether-connector-wagon</artifactId>
-            <version>${aether-version}</version>
+            <version>${aether-wagon-version}</version>
             <scope>provided</scope>
         </dependency>
 
@@ -286,24 +286,24 @@
             </exclusions>
         </dependency>
 
-        <dependency>
-            <groupId>org.sonatype.sisu</groupId>
-            <artifactId>sisu-inject-plexus</artifactId>
-            <version>${sisu-inject-version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.sonatype.sisu</groupId>-->
+            <!--<artifactId>sisu-inject-plexus</artifactId>-->
+            <!--<version>${sisu-inject-version}</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.sonatype.sisu</groupId>
-            <artifactId>sisu-inject-bean</artifactId>
-            <version>${sisu-inject-version}</version>
-            <exclusions>
-                <!-- Duplicate of "org.sonatype.sisu:sisu-guice:jar:3.1.1" -->
-                <exclusion>
-                    <groupId>org.sonatype.sisu</groupId>
-                    <artifactId>sisu-guice</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.sonatype.sisu</groupId>-->
+            <!--<artifactId>sisu-inject-bean</artifactId>-->
+            <!--<version>${sisu-inject-version}</version>-->
+            <!--<exclusions>-->
+                <!--&lt;!&ndash; Duplicate of "org.sonatype.sisu:sisu-guice:jar:3.1.1" &ndash;&gt;-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.sonatype.sisu</groupId>-->
+                    <!--<artifactId>sisu-guice</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
 
         <!-- ~~~~~~~~~~~~~~~~~~~ -->
         <!-- org.codehaus.groovy -->
