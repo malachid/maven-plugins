@@ -92,27 +92,6 @@
         <!--<sisu-inject-version>2.4.0</sisu-inject-version>-->
     </properties>
 
-	<pluginRepositories>
-		<!-- enable finding previous-plugins-version -->
-		<pluginRepository>
-			<id>plugins-releases</id>
-			<url>http://evgenyg.artifactoryonline.com/evgenyg/plugins-releases/</url>
-		</pluginRepository>
-		<!-- enable finding updated gcommons -->
-		<pluginRepository>
-			<id>libs-releases-local</id>
-			<url>http://evgenyg.artifactoryonline.com/evgenyg/libs-releases-local/</url>
-		</pluginRepository>
-	</pluginRepositories>
-
-	<repositories>
-		<!-- enable finding updated gcommons -->
-		<repository>
-			<id>libs-snapshots-local</id>
-			<url>http://evgenyg.artifactoryonline.com/evgenyg/libs-snapshots-local/</url>
-		</repository>
-	</repositories>
-
     <modules>
 
         <!-- ~~~~~ -->
