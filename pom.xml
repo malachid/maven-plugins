@@ -9,7 +9,7 @@
     <groupId>com.github.goldin</groupId>
     <artifactId>main.plugins</artifactId>
     <packaging>pom</packaging>
-    <version>0.3-SNAPSHOT</version>
+    <version>0.4-SNAPSHOT</version>
     <name>[${project.groupId}:${project.artifactId}:${project.version}]</name>
     <description>Maven plugins</description>
     <url>http://evgeny-goldin.com/wiki/Maven-plugins</url>
@@ -55,7 +55,7 @@
         <maven-version>3.1.1</maven-version>
 
         <!-- http://evgenyg.artifactoryonline.com/evgenyg/plugins-releases/com/github/goldin/about-maven-plugin/ -->
-        <previous-plugins-version>0.3-beta-1</previous-plugins-version>
+        <previous-plugins-version>0.3-SNAPSHOT</previous-plugins-version>
 
         <!-- http://evgenyg.artifactoryonline.com/evgenyg/repo/com/github/goldin/gcommons/ -->
         <gcommons-version>0.6.3-SNAPSHOT</gcommons-version>
@@ -262,26 +262,25 @@
 
         <plugins>
 
-            <!-- Can't use the MVN 3.0 version of this to create the MVN 3.1 version -->
-            <!--<plugin>-->
-                <!--<groupId>com.github.goldin</groupId>-->
-                <!--<artifactId>silencer-maven-plugin</artifactId>-->
-                <!--<version>${previous-plugins-version}</version>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<id>enable-silencer</id>-->
-                        <!--<phase>validate</phase>-->
-                        <!--<goals>-->
-                            <!--<goal>silence</goal>-->
-                        <!--</goals>-->
-                        <!--<configuration>-->
-                            <!--<runIf>{{ System.getProperty( 'silence' ) != null }}</runIf>-->
-                            <!--<logSummary>true</logSummary>-->
-                            <!--<topN>5</topN>-->
-                        <!--</configuration>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-            <!--</plugin>-->
+            <plugin>
+                <groupId>com.github.goldin</groupId>
+                <artifactId>silencer-maven-plugin</artifactId>
+                <version>${previous-plugins-version}</version>
+                <executions>
+                    <execution>
+                        <id>enable-silencer</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>silence</goal>
+                        </goals>
+                        <configuration>
+                            <runIf>{{ System.getProperty( 'silence' ) != null }}</runIf>
+                            <logSummary>true</logSummary>
+                            <topN>5</topN>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 
             <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
             <!-- Enforcing Maven/Java versions                                                 -->
