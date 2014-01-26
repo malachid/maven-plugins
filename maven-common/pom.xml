@@ -272,19 +272,19 @@
         <!-- org.sonatype.sisu -->
         <!-- ~~~~~~~~~~~~~~~~~ -->
 
-        <dependency>
-            <groupId>org.sonatype.sisu</groupId>
-            <artifactId>sisu-guice</artifactId>
+        <!--<dependency>-->
+            <!--<groupId>org.sonatype.sisu</groupId>-->
+            <!--<artifactId>sisu-guice</artifactId>-->
             <!-- http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.sonatype.sisu%22%20AND%20a%3A%22sisu-guice%22 -->
-            <version>3.1.5</version>
-            <exclusions>
+            <!--<version>3.1.5</version>-->
+            <!--<exclusions>-->
                 <!-- Duplicate of "org.sonatype.sisu:sisu-inject-bean:jar:2.3.0"  -->
-                <exclusion>
-                    <groupId>javax.inject</groupId>
-                    <artifactId>javax.inject</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+                <!--<exclusion>-->
+                    <!--<groupId>javax.inject</groupId>-->
+                    <!--<artifactId>javax.inject</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
 
         <!--<dependency>-->
             <!--<groupId>org.sonatype.sisu</groupId>-->
