@@ -105,6 +105,7 @@ class ConfigMarkup extends Markup
                 buildWrappers{ addExtensionPoint( job.buildWrappers ) }
                 if ( isMavenJob ){ addMavenBuilders() }
             }
+            add( '\n' )
         }
     }
 
