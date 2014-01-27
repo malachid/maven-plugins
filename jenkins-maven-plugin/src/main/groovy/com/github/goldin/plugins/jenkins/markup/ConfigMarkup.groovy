@@ -90,7 +90,10 @@ class ConfigMarkup extends Markup
                 addScm()
                 add( 'quietPeriod',           job.quietPeriod )
                 add( 'scmCheckoutRetryCount', job.scmCheckoutRetryCount )
+
                 if(job.node) { assignedNode(job.node) }
+                else {assignedNode()}
+
                 canRoam( job.node ? false : true )
                 disabled( job.disabled )
                 blockBuildWhenDownstreamBuilding( job.blockBuildWhenDownstreamBuilding )
@@ -105,7 +108,6 @@ class ConfigMarkup extends Markup
                 buildWrappers{ addExtensionPoint( job.buildWrappers ) }
                 if ( isMavenJob ){ addMavenBuilders() }
             }
-            add( '\n' )
         }
     }
 

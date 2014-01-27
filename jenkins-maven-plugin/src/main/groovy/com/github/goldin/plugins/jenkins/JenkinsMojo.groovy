@@ -98,7 +98,8 @@ class JenkinsMojo extends BaseGroovyMojo
             configMarkup = process( configMarkup, configFile, job, jobs, indent, newLine )
         }
 
-        write( configFile, configMarkup)
+        // Note: This line prevents trailing newlines in the file
+        write( configFile, configMarkup.trim())
     }
 
 
